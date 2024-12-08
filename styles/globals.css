@@ -25,6 +25,7 @@ body {
   border-radius: 8px;  /* Slightly rounded corners */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  margin-bottom: 20px;
 }
 
 /* Add a subtle shadow to the text for clarity */
@@ -56,4 +57,9 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px; /* Adjust the spacing as needed */
 }

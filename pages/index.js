@@ -117,7 +117,7 @@ export default function Home({ geojsonData }) {
       />
 
       <div className="element">
-        <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Water Scarcity Through Time</h1>
+      <h1 className="heading">Water Scarcity Through Time</h1>
       </div>
 
       <div

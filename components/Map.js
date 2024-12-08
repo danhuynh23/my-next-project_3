@@ -4,6 +4,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import * as d3 from 'd3';
 import styles from '../styles/Map.module.css';  // Import your CSS module
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWater, faSatellite, faMap } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -301,13 +303,15 @@ const Map = ({ geojsonData, onMapAreaSelect, selectedMapArea}) => {
             onClick={() => setIsSatellite(!isSatellite)}
             className={`${styles.toggleButton} ${isSatellite ? styles.activeButton : ''}`}
           >
-            {isSatellite ? 'Switch to Default' : 'Switch to Satellite'}
+            {isSatellite ? <FontAwesomeIcon icon={faMap} />: <FontAwesomeIcon icon={faSatellite} />}
           </button>
           <button
             className={`${styles.toggleButton} ${showRivers ? styles.activeButton : ''}`}
             onClick={() => setShowRivers(!showRivers)} // Toggle the state
           >
-            {showRivers ? 'Hide Rivers' : 'Show Rivers'} {/* Change text based on state */}
+            {showRivers ? <>
+          <FontAwesomeIcon icon={faWater} /> {/* Water Icon */}
+        </>: <FontAwesomeIcon icon={faWater} />} {/* Change text based on state */}
           </button>
         </div>
 
